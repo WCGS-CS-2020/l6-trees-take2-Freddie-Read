@@ -4,14 +4,14 @@ using System.Text;
 namespace L6Trees
 {
     // Print out the tree using the different tree traversal metods
-    
+
     class Node
     {
         private Node left;
         private Node right;
         private string _item;
 
-        public Node(string item) 
+        public Node(string item)
         {
             _item = item;
         }
@@ -32,7 +32,7 @@ namespace L6Trees
                     right.addNode(item);
             }
         }
-        public bool findNode(string item) 
+        public bool findNode(string item)
         {
             if (item == _item)
                 return true;
@@ -44,7 +44,7 @@ namespace L6Trees
                 return false;
         }
         //Doesn't work yet
-        public bool deleteNode(string item) 
+        public bool deleteNode(string item)
         {
             if (item == _item)
             {
@@ -66,38 +66,17 @@ namespace L6Trees
             return false;
         }
         //Doesn't work yet
-        public void printTree() 
+        public void printTree(Node next)
         {
-            try
+            /*if (left != null)
             {
-                if (left._item != null)
-                {
-                    Console.WriteLine(left._item);
-                    left.printTree();
-                }
+                printTree(left);
             }
-            catch (Exception)
+            if (right != null)
             {
-                try
-                {
-                    if (right._item != null)
-                    {
-                        Console.WriteLine(right._item);
-                        right.printTree();
-                    }
-                }
-                catch (Exception)
-                {
-                    
-                }
+                printTree(right);
             }
-            
-            // if node.left != null
-            //  sub(node left)
-            // if node.right != null
-            //  sub(node right)
-            // print node
-            
+            Console.WriteLine(next);*/
         }
 
         bool sortAlphabet(string item, string _item)
@@ -113,7 +92,6 @@ namespace L6Trees
             */
 
             return itemAscii[0] < _itemAscii[0] ? true : false;
-
         }
     }
 
@@ -147,7 +125,7 @@ namespace L6Trees
             else
                 Console.WriteLine("Node doesn't exist");*/
 
-            root.printTree();
+            //root.printTree(root);
 
             Console.ReadLine();
 
