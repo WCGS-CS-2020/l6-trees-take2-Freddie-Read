@@ -92,6 +92,11 @@ namespace L6Trees
                 }
             }
             
+            // if node.left != null
+            //  sub(node left)
+            // if node.right != null
+            //  sub(node right)
+            // print node
             
         }
 
